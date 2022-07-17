@@ -7,21 +7,19 @@ import SearchPage from './components/SearchPage/SearchPage';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-const Main = _ =>  (<div className="app__mainpage">
+const Main = _ =>  (<div className="flex">
 <SideBar />
 <RecommendedVideos />
 </div>)
 
-const Search = _ => <div className="app__mainpage">
+const Search = _ => <div className="flex">
 <SideBar />
 <SearchPage />
 </div>;
 
-const VideoPage = _ => <Route path='/video/:videoId'>
-<div className="app__mainpage">
+const VideoPage = _ => (<div className="flex">
   <VideoPlayer />
-</div>
-</Route>
+</div>)
 
 function App() {
 
@@ -30,7 +28,7 @@ function App() {
       <Router>
       <Header />
         <Routes>
-          <Route path='/video/:videoId' element={VideoPage} />
+          <Route path='/video/:videoId' element={<VideoPage />} />
           <Route path='/search/:searchQuery' element={<Search />}/>
           <Route path='/' element={<Main />}/>
         </Routes>

@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import "./SearchPage.css";
 import TuneIcon from '@material-ui/icons/Tune';
 import ChannelRow from './../ChannelRow/ChannelRow';
 import VideoRow from './../VideoRow/VideoRow';
@@ -95,10 +94,10 @@ const SearchPage = (props) => {
       return <Alert severity="error" className='loading'>No Results found!</Alert>
     }
     return (
-        <div className="searchpage">
-            <div className="searchpage__filter">
+        <div className="flex-[0.8] bg-white p-5">
+            <div className="flex items-center text-gray-400 text-sm">
                 <TuneIcon />
-                <h2>Filter</h2>
+                <h2 className='ml-3'>Filter</h2>
             </div>
             {/* { isLoading ? <CircularProgress className='loading' color='secondary' /> : null }
             <hr />
@@ -111,7 +110,7 @@ const SearchPage = (props) => {
                                   description={channelRow.description}
                             /> : null
             } */}
-            <hr />
+            <hr className='h-px bg-slate-50 my-2.5'/>
             {
               videoRows.map((item, index) => {
                 return (

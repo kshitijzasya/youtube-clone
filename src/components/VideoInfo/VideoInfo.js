@@ -42,7 +42,7 @@ const VideoInfo = ({title, description, publishedDate, channelTitle, channelImag
                     <Button color='secondary' >SUBSCRIBE</Button>
                 </div>
             </div>
-            <div className='videoinfo__channeldesc'>
+            <div className='text-sm text-current'>
                 <p>{description}</p>
             </div>
         </div>

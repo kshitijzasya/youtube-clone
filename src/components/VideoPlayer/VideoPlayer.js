@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from 'react-router';
 import Video from './../Video/Video'
-import './VideoPlayer.css';
 import RecommendedVideos from '../recommended/RecommendedVideos';
 import VideoInfo from '../VideoInfo/VideoInfo';
 import axios from 'axios';
@@ -69,12 +68,12 @@ const VideoPlayer = () => {
         return <Alert severity="error" className='loading'>No Results found!</Alert>
     }
     return (
-        <div className='videoplayer'>
-            <div className='videoplayer__videodetails'>
-                <div className='videoplayer__video'>
+        <div className='flex justify-center'>
+            <div className='flex-[0.8]'>
+                <div className='mx-[5%] my-[10%]'>
                     {isLoading ? <CircularProgress className='loading' color='secondary'/> : <Video videoId={videoId} /> }
                 </div>
-                <div className='videoplayer__videoinfo'>
+                <div className='flex-row'>
                     {!isLoading ? <VideoInfo
                                     title={videoInfo.snippet}
                                     description={videoInfo.description}
@@ -89,7 +88,7 @@ const VideoPlayer = () => {
                     }
                 </div>
             </div>
-            <div className='videoplayer__suggested'>
+            <div className='flex-[0.8] mt-0'>
                 <RecommendedVideos />
             </div>
         </div>

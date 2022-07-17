@@ -1,6 +1,5 @@
 import React from 'react';
 import SideBarRow from './../SideBarRow/SideBarRow';
-import './SideBar.css';
 import HomeIcon from '@material-ui/icons/Home';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
@@ -13,7 +12,7 @@ import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 
 const SideBar = () => {
     return (
-        <div className='sidebar'>
+        <div className='flex-[0.2]'>
             <SideBarRow selected Icon={HomeIcon} title='Home' />
             <SideBarRow Icon={WhatshotIcon} title='Trending' />
             <SideBarRow Icon={SubscriptionsIcon} title='Subscription' />

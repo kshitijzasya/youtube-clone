@@ -61,9 +61,9 @@ const RecommendedVideos = () => {
     }
     return (
         
-        <div className='recommendedvideos'>
+        <div className='flex-[0.8]'>
             { isLoading ? <CircularProgress className='loading' color='secondary' /> : null }
-            <div className="recommendedvideos__videos">
+            <div className="flex flex-wrap">
                 {
                   videoCards.map(item => {
                     return (
