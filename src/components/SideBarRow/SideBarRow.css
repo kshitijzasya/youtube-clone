@@ -1,0 +1,12 @@
+
+.sidebarrow:hover >.sidebarrow__title {
+    font-weight: bold;
+}
+
+.selected {
+    background-color: lightgray;
+}
+
+.selected-icon {
+    color: #ef4444
+}

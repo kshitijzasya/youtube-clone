@@ -1,0 +1,7 @@
+.recommendedVideos > h2 {
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+.recommendedvideos__videos > * {
+    margin-left: 5%;
+}
